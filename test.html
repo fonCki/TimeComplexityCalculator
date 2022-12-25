@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<bdy style="font-family: 'American Typewriter', monospace">
 <ol>
     <li>T(n) = 3n2+5n+17 -> could be written like this</li>
     <li>T(n) = 3n^2+5n+17 -> could be written like this</li>
@@ -12,6 +12,71 @@
     <li>4𝑛2</li>
     <li>4𝑛2+18𝑛log𝑛</li>
     <li>4𝑛+18𝑛log𝑛</li>
+    <li><pre>
+    sum = 0;
+    for (i = 0; i < n; i++) {
+      sum++;
+    }
+   </pre></li>
+    <li><pre>
+    sum = 0;
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < n; j++) {
+        sum++;
+      }
+    }
+   </pre></li>
+    <li><pre>
+    sum = 0;
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < i * i; j++) {
+        sum++;
+      }
+    }
+   </pre></li>
+    <li><pre>
+    sum = 0;
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < i; j++) {
+        sum++;
+      }
+    }
+   </pre></li>
+    <li><pre>
+    sum = 0;
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < i * i; j++) {
+        for (k = 0; k < j; k++) {
+          sum++;
+        }
+      }
+    }
+
+   </pre></li>
+    <li><pre>
+    sum = 0;
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < i * i; j++) {
+        for (k = 0; k < j; k++) {
+          for (l = 0; l < k; l++) {
+            sum++;
+          }
+        }
+      }
+    }
+   </pre></li>
+    <li><pre>
+    sum = 0;
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < i * i; j++) {
+       if (j% 1 == 0) {
+          for (k = 0; k < j; k++) {
+                  sum++;
+                }
+              }
+            }
+          }
+    </pre></li>
     <li><pre>
       int find (int x[], int val) {
         for (int i = 0; i < X_LENGTH; i++) {
@@ -85,71 +150,6 @@
       else:
       return x*value*value
    </pre></li>
-  <li><pre>
-    sum = 0;
-    for (i = 0; i < n; i++) {
-      sum++;
-    }
-   </pre></li>
-  <li><pre>
-    sum = 0;
-    for (i = 0; i < n; i++) {
-      for (j = 0; j < n; j++) {
-        sum++;
-      }
-    }
-   </pre></li>
-  <li><pre>
-    sum = 0;
-    for (i = 0; i < n; i++) {
-      for (j = 0; j < i * i; j++) {
-        sum++;
-      }
-    }
-   </pre></li>
-  <li><pre>
-    sum = 0;
-    for (i = 0; i < n; i++) {
-      for (j = 0; j < i; j++) {
-        sum++;
-      }
-    }
-   </pre></li>
-  <li><pre>
-    sum = 0;
-    for (i = 0; i < n; i++) {
-      for (j = 0; j < i * i; j++) {
-        for (k = 0; k < j; k++) {
-          sum++;
-        }
-      }
-    }
 
-   </pre></li>
-  <li><pre>
-    sum = 0;
-    for (i = 0; i < n; i++) {
-      for (j = 0; j < i * i; j++) {
-        for (k = 0; k < j; k++) {
-          for (l = 0; l < k; l++) {
-            sum++;
-          }
-        }
-      }
-    }
-   </pre></li>
-  <li><pre>
-    sum = 0;
-    for (i = 0; i < n; i++) {
-      for (j = 0; j < i * i; j++) {
-       if (j% 1 == 0) {
-          for (k = 0; k < j; k++) {
-                  sum++;
-                }
-              }
-            }
-          }
-    </pre></li>
-
-</body>
+</bdy>
 </html>

@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var responseText = document.getElementById('response-text');
     var convertButton = document.getElementById('convert-button');
     var inputText = document.getElementById('input-text');
+    var version = document.getElementById('version');
+
+    version.innerText = chrome.runtime.getManifest().version;
 
     // block the possiblity to edit the text inside the button convertButton
 
@@ -36,13 +39,16 @@ document.addEventListener('DOMContentLoaded', function() {
             responseText.innerHTML = "Loading...";
                 readConfigFile().then((data) => {
                     openai_test(data.OPENAI_API_KEY, functionInput).then((response) => {
+                        console.log(response);
                         responseText.innerHTML = response["choices"][0]["text"];
                     }).catch((error) => {
-                        responseText.innerHTML = "Error: api error" + error;
+                        console.log(error);
+                        responseText.innerHTML = "Error: Unable to connect to API. Please ensure that your API key has been properly loaded and is valid.";
                     });
                 }).catch((error) => {
+                    console.log(error);
                     //must include config.json file with OPENAI_API_KEY
-                    responseText.innerHTML = "Error: must include config.json file with OPENAI_API_KEY " + error;
+                    responseText.innerHTML = "Error: Unable to connect to API. Please ensure that your API key has been properly loaded and is valid."
                 }
             );
         });
