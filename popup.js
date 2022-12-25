@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     version.innerText = chrome.runtime.getManifest().version;
 
-    // block the possiblity to edit the text inside the button convertButton
-
 
     // responseText.style.display = "none";
     inputText.focus();
@@ -26,12 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         );
-
-
-        // convertButton.addEventListener('click', () => {
-        //     responseText.style.display = "block";
-        //     responseText.innerHTML = inputText.value.toUpperCase();
-        // });
 
 
         convertButton.addEventListener('click', function () {
@@ -93,12 +85,10 @@ function readConfigFile() {
     return fetch('config.json')
         .then(response => response.json())
         .then(data => {
-            // process the response data here
-            console.log(data);
             return data
         })
         .catch(error => {
-            console.log(error);
+            return error
         });
 }
 
