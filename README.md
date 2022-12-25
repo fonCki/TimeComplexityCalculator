@@ -42,7 +42,7 @@ To test the extension, you can use the `test.html` file in the `utils` directory
 
 ## Contributing
 
-If you want to contribute to this project, please send an email to [YOUR_EMAIL_ADDRESS] with a description of your proposed changes.
+If you want to contribute to this project, please send me an email with a description of your proposed changes.
 
 
 ## License
