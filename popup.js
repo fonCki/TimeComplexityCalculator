@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // block the possiblity to edit the text inside the button convertButton
 
 
-
-    responseText.style.display = "none";
+    // responseText.style.display = "none";
     inputText.focus();
 
     chrome.tabs.query({currentWindow: true, active: true}, (tabs) => {
@@ -26,27 +25,27 @@ document.addEventListener('DOMContentLoaded', function() {
         );
 
 
-        convertButton.addEventListener('click', () => {
-            responseText.style.display = "block";
-            responseText.innerHTML = inputText.value.toUpperCase();
-        });
-
-
-        // convertButton.addEventListener('click', function () {
-        //     functionInput = inputText.value;
-        //     inputText.value = "Loading...";
-        //         readConfigFile().then((data) => {
-        //             openai_test(data.OPENAI_API_KEY, functionInput).then((response) => {
-        //                 inputText.value = response["choices"][0]["text"];
-        //             }).catch((error) => {
-        //                 inputText.value = "Error: api error" + error;
-        //             });
-        //         }).catch((error) => {
-        //             //must include config.json file with OPENAI_API_KEY
-        //             inputText.value = "Error: must include config.json file with OPENAI_API_KEY " + error;
-        //         }
-        //     );
+        // convertButton.addEventListener('click', () => {
+        //     responseText.style.display = "block";
+        //     responseText.innerHTML = inputText.value.toUpperCase();
         // });
+
+
+        convertButton.addEventListener('click', function () {
+            functionInput = inputText.value;
+            responseText.innerHTML = "Loading...";
+                readConfigFile().then((data) => {
+                    openai_test(data.OPENAI_API_KEY, functionInput).then((response) => {
+                        responseText.innerHTML = response["choices"][0]["text"];
+                    }).catch((error) => {
+                        responseText.innerHTML = "Error: api error" + error;
+                    });
+                }).catch((error) => {
+                    //must include config.json file with OPENAI_API_KEY
+                    responseText.innerHTML = "Error: must include config.json file with OPENAI_API_KEY " + error;
+                }
+            );
+        });
     });
 });
 
