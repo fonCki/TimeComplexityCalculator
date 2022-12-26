@@ -26,6 +26,10 @@ right: 2px;
 
 }
 
+textarea::placeholder {
+    opacity: 0.5;
+}
+
 body {
     overflow: hidden;
     padding: 1em;
