@@ -72,11 +72,10 @@ function openai_test(token, functionInput) {
         .then(response => response.json())
         .then(data => {
             // process the response data here
-            console.log(data);
             return data
         })
         .catch(error => {
-            console.log(error);
+            return error
         });
 }
 
