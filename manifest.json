@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Text Converter",
-  "description": "Converts text to uppercase",
+  "name": "Time Complexity Calculator",
+  "description": "Calculate time complexity",
   "version": "2.2.0",
   "action": {
     "default_icon": "./assets/icon.png",
