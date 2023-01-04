@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Time Complexity Estimator",
   "description": "This Chrome extension allows you to easily calculate the time complexity of a function. This tool is useful for software developers looking to optimize their code and improve its performance. With this extension, you can quickly and easily determine the efficiency of your functions and make informed decisions about how to optimize them.",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "action": {
     "default_icon": "assets/icon.png",
     "default_popup": "popup/popup.html"
@@ -14,9 +14,5 @@
     "activeTab",
     "tabs",
     "scripting"
-  ],
-  "background": {
-    "service_worker": "background.js",
-    "type": "module"
-  }
+  ]
 }
