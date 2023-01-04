@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'BBTF';
-    src: url('assets/BTTF.ttf');
+    src: url('../assets/BTTF.ttf');
 }
 
 #clear {
@@ -113,13 +113,9 @@ textarea {
 #text-reader {
     display: flex;
     flex-direction: column;
-    /*background: blue;*/
     width:20em;
     min-height:5em;
     height:500px;
-    /*border: solid 1px #000;*/
-    min-height: 200px;
-    width: 300px;
     overflow: hidden;
 }
 

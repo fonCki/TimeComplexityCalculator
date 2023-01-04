@@ -81,7 +81,7 @@ function openai_test(token, functionInput) {
 
 
 function readConfigFile() {
-    return fetch('config.json')
+    return fetch('../config.json')
         .then(response => response.json())
         .then(data => {
             return data
